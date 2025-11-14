@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background: #313647;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFF8D4;
+}
+#container{
+    background:  #435663;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    width: 350px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FFF8D4;
+}
+
+.input-section{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#task-input{
+  flex: 1;  
+  padding: 10px;
+  border: 1px solid #A3B087;
+  border-radius: 5px;
+  outline: none;
+   background: #313647;
+   color: #FFF8D4;
+}
+#task-input::placeholder{
+    color: #A3B087; 
+}
+
+#add-btn{
+    padding: 10px 15px;
+    background: #A3B087;
+    border: none;
+    color: #313647;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+     transition: 0.3s;
+}
+
+#add-btn:hover{
+    background: #FFF8D4; 
+    color: #313647;
+}
+
+ul{
+    list-style: none;
+}
+li{
+    background:  #313647;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    /* transition: 0.3s; */
+}
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+      color: #FFF8D4;
+}
+li.completed span {
+    text-decoration: none; 
+    color: inherit;      
+}
+/* Checkbox style */
+.check-box {
+    width: 18px;
+    height: 18px;
+    border: 2px solid  #A3B087;
+    border-radius: 50%;
+    /* margin-right: 10px; */
+    cursor: pointer;
+    position: relative;
+     transition: 0.2s;
+}
+
+/* Tick mark (hide initially) */
+.check-box::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:  #A3B087;
+    display: none;
+}
+
+/* When completed – show tick */
+.completed .check-box::after {
+    display: block;
+}
+
+li:hover {
+    transform: translateY(-2px);
+}
+
+.check-box::after {
+    transition: all 0.2s ease;
+}
+

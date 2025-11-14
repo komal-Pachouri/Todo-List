@@ -1,0 +1,11 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Ignore Node modules (agar Node project hai)
+node_modules/
+
+# Ignore OneDrive files
+OneDrive/
